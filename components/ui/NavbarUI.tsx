@@ -9,8 +9,16 @@ const routes = [
     href: "/",
   },
   {
+    text: "Novedaes",
+    href: "/novedades",
+  },
+  {
     text: "Productos",
     href: "/productos",
+  },
+  {
+    text: "Cajas Sorpresa",
+    href: "/cajas",
   },
   {
     text: "Lista de Deseos",
