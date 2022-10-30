@@ -1,25 +1,25 @@
 import { Button, Navbar, Text } from "@nextui-org/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import { SwitchTheme } from "./theme/SwitchTheme";
 
 const routes = [
-    {
-        text: "Inicio",
-        href: "/"
-    },
-    {
-        text: "Productos",
-        href: "/productos"
-    },
-    {
-        text: "Lista de deseos",
-        href: "/deseos"
-    },
-]
+  {
+    text: "Inicio",
+    href: "/",
+  },
+  {
+    text: "Productos",
+    href: "/productos",
+  },
+  {
+    text: "Lista de Deseos",
+    href: "/deseos",
+  },
+];
 
 export const NavbarUI = () => {
-    const {asPath} = useRouter()
+  const { asPath } = useRouter();
   return (
     <Navbar variant="sticky">
       <Navbar.Brand>
@@ -27,19 +27,33 @@ export const NavbarUI = () => {
           SHINIGAMI SHOP
         </Text>
       </Navbar.Brand>
-      <Navbar.Content hideIn="xs" activeColor="primary" variant="underline-rounded">
-        {
-            routes.map(route => <Navbar.Link isActive={asPath === route.href ? true : false} as={Link} href={route.href}>{route.text}</Navbar.Link>)
-        }
+      <Navbar.Content
+        hideIn="xs"
+        activeColor="primary"
+        variant="underline-rounded"
+      >
+        {routes.map((route) => (
+          <Navbar.Link
+            key={route.href}
+            isActive={asPath === route.href ? true : false}
+            as={Link}
+            href={route.href}
+          >
+            {route.text}
+          </Navbar.Link>
+        ))}
       </Navbar.Content>
       <Navbar.Content>
         <Navbar.Link color="inherit" href="#">
-          Login
+          Iniciar Sesion
         </Navbar.Link>
         <Navbar.Item>
           <Button auto flat href="#">
-            Sign Up
+            Registrate
           </Button>
+        </Navbar.Item>
+        <Navbar.Item>
+          <SwitchTheme />
         </Navbar.Item>
       </Navbar.Content>
     </Navbar>
