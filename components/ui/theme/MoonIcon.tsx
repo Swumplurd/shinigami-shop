@@ -3,10 +3,10 @@ import { FC } from "react";
 interface Props {
   fill: any;
   filled: any;
-  size: any;
-  height: any;
-  width: any;
-  label: any;
+  size?: any;
+  height?: any;
+  width?: any;
+  label?: any;
 }
 
 export const MoonIcon: FC<Props> = ({

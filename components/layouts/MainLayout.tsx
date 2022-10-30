@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import React, { FC, PropsWithChildren } from 'react'
-import { NavbarUI } from '../ui/NavbarUI'
+import { FC, PropsWithChildren } from "react";
+import { Container } from "@nextui-org/react";
+import { NavbarUI } from "../ui/NavbarUI";
+import Head from "next/head";
 
 interface Props {
   title?: string;
@@ -8,21 +9,26 @@ interface Props {
   kw?: string;
 }
 
-export const MainLayout: FC<PropsWithChildren & Props> = ({ children, title = "Shinigami Shop | Inicio", desc = "Venta de productos como: anime, mangas, figuras, ropa, articulos electronicos etc.", kw = "mangas, manga, productos japoneses, figuras, figurillas, cosplay, anime, japon"}) => {
+export const MainLayout: FC<PropsWithChildren & Props> = ({
+  children,
+  title = "Shinigami Shop | Inicio",
+  desc = "Venta de productos como: anime, mangas, figuras, ropa, articulos electronicos etc.",
+  kw = "mangas, manga, productos japoneses, figuras, figurillas, cosplay, anime, japon",
+}) => {
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="author" content="swumplurd"/>
-        <meta name="description" content={desc}/>
-        <meta name="keywords" content={kw}/>
+        <meta name="author" content="swumplurd" />
+        <meta name="description" content={desc} />
+        <meta name="keywords" content={kw} />
       </Head>
-      
-      <NavbarUI/>
-      
-      <main>
+
+      <NavbarUI />
+
+      <Container as="main" lg>
         {children}
-      </main>
+      </Container>
     </>
-  )
-}
+  );
+};

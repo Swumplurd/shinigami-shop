@@ -1,14 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isDark: true
-}
+  isDark: true,
+};
 
 export const themeSlice = createSlice({
-  name: 'theme',
+  name: "theme",
   initialState,
   reducers: {
-    themeSwitch: (state, action) => {state.isDark = action.payload}
+    themeSwitch: (state, action) => {
+      state.isDark = action.payload;
+    },
   },
 });
 
