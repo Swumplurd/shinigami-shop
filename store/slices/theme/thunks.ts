@@ -12,10 +12,7 @@ export const startThemeSwitch = (currentState: string | boolean | null) => {
     } else if (currentState === "false") {
       localStorage.setItem("isDark", JSON.stringify(false));
       dispatch(themeSwitch(false));
-    } else if (currentState === true) {
-      localStorage.setItem("isDark", JSON.stringify(!currentState));
-      dispatch(themeSwitch(!currentState));
-    } else if (currentState === false) {
+    } else {
       localStorage.setItem("isDark", JSON.stringify(!currentState));
       dispatch(themeSwitch(!currentState));
     }

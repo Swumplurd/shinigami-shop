@@ -17,11 +17,11 @@ const routes = [
     href: "/productos",
   },
   {
-    text: "Cajas Sorpresa",
+    text: "Cajas",
     href: "/cajas",
   },
   {
-    text: "Lista de Deseos",
+    text: "Deseos",
     href: "/deseos",
   },
 ];
@@ -29,21 +29,22 @@ const routes = [
 export const NavbarUI = () => {
   const { asPath } = useRouter();
   return (
-    <Navbar variant="sticky">
+    <Navbar isCompact variant="sticky">
       <Navbar.Brand>
-        <Text b color="inherit" hideIn="xs">
+        <Navbar.Toggle aria-label="toggle navigation" showIn="sm" />
+        <Text b color="inherit" hideIn="sm">
           SHINIGAMI SHOP
         </Text>
       </Navbar.Brand>
       <Navbar.Content
-        hideIn="xs"
-        activeColor="primary"
+        hideIn="sm"
+        activeColor="error"
         variant="underline-rounded"
       >
-        {routes.map((route) => (
+        {routes.map((route, index) => (
           <Navbar.Link
             key={route.href}
-            isActive={asPath === route.href ? true : false}
+            isActive={ route.href === asPath || (asPath.includes(route.href) && index != 0) }
             as={Link}
             href={route.href}
           >
@@ -56,7 +57,7 @@ export const NavbarUI = () => {
           Iniciar Sesion
         </Navbar.Link>
         <Navbar.Item>
-          <Button auto flat href="#">
+          <Button auto flat href="#" color="error">
             Registrate
           </Button>
         </Navbar.Item>
@@ -64,6 +65,15 @@ export const NavbarUI = () => {
           <SwitchTheme />
         </Navbar.Item>
       </Navbar.Content>
+      <Navbar.Collapse>
+        {routes.map((route, index) => (
+          <Navbar.CollapseItem key={index}>
+            <Link color="inherit" href={route.href}>
+              {route.text}
+            </Link>
+          </Navbar.CollapseItem>
+        ))}
+      </Navbar.Collapse>
     </Navbar>
   );
 };

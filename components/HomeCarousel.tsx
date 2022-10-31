@@ -13,12 +13,11 @@ export const HomeCarousel = () => {
       <Card variant="bordered">
         <Swiper
           slidesPerView={1}
-          spaceBetween={30}
           loop={true}
           pagination={{
             clickable: true,
           }}
-          navigation={true}
+          navigation={false}
           modules={[Pagination, Navigation]}
           className="home-swiper"
           autoplay={{ delay: 3500 }}

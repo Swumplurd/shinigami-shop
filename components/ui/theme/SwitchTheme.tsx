@@ -14,14 +14,16 @@ export const SwitchTheme = () => {
           auto
           light
           icon={<SunIcon fill="currentcolor" filled />}
-          onClick={() => dispatch(startThemeSwitch(isDark))}
+          onPress={() => dispatch(startThemeSwitch(isDark))}
+          onDoubleClick={() => {console.log('Doble')}}
         />
       ) : (
         <Button
           auto
           light
           icon={<MoonIcon fill="currentcolor" filled />}
-          onClick={() => dispatch(startThemeSwitch(isDark))}
+          onPress={() => dispatch(startThemeSwitch(isDark))}
+          onDoubleClick={() => {console.log('Doble')}}
         />
       )}
     </>
