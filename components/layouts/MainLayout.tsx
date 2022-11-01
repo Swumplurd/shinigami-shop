@@ -1,7 +1,8 @@
 import { FC, PropsWithChildren } from "react";
-import { Container } from "@nextui-org/react";
+import { Container, Spacer } from "@nextui-org/react";
 import { NavbarUI } from "../ui/NavbarUI";
 import Head from "next/head";
+import "animate.css/animate.min.css"
 
 interface Props {
   title?: string;
@@ -26,8 +27,10 @@ export const MainLayout: FC<PropsWithChildren & Props> = ({
 
       <NavbarUI />
 
-      <Container as="main" lg>
+      <Container as="main" lg className="animate__animated animate__fadeIn">
+        <Spacer/>
         {children}
+        <Spacer/>
       </Container>
     </>
   );

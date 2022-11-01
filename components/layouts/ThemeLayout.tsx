@@ -25,7 +25,7 @@ export const ThemeLayout: FC<PropsWithChildren> = ({ children }) => {
     if (typeof window !== "undefined") {
       dispatch(startThemeSwitch(localStorage.getItem("isDark")));
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <NextUIProvider theme={isDark ? darkTheme : lightTheme}>

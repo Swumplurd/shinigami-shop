@@ -9,12 +9,12 @@ interface Props {
 }
 
 const Producto: FC<Props> = ({producto}) => {
-  const {name, desc} = producto[0]
+  const {name, desc, kw} = producto[0]
   return (
     <MainLayout
       title={`Shinigami Shop | ${name}`}
       desc={desc}
-      kw="mangas, accesorios de anime, edredones, articulos decorativos, electronicos"
+      kw={kw}
     >
       <h1>
         Welcome to <a href="https://nextjs.org">{name}</a>

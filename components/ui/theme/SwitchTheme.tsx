@@ -15,7 +15,7 @@ export const SwitchTheme = () => {
           light
           icon={<SunIcon fill="currentcolor" filled />}
           onPress={() => dispatch(startThemeSwitch(isDark))}
-          onDoubleClick={() => {console.log('Doble')}}
+          color="error"
         />
       ) : (
         <Button
@@ -23,7 +23,7 @@ export const SwitchTheme = () => {
           light
           icon={<MoonIcon fill="currentcolor" filled />}
           onPress={() => dispatch(startThemeSwitch(isDark))}
-          onDoubleClick={() => {console.log('Doble')}}
+          color="error"
         />
       )}
     </>

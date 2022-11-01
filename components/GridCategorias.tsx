@@ -12,6 +12,7 @@ export const GridCategorias = () => {
       {cat_productos.map((cat, index) => (
         <Grid xl={2} lg={3} md={3} sm={3} xs={6} key={index}>
           <Card
+            variant="bordered"
             isHoverable
             isPressable
             onPress={() => handleCatPress(cat.href)}
@@ -21,7 +22,7 @@ export const GridCategorias = () => {
                 <Text
                   h3
                   css={{
-                    textGradient: "45deg, $purple600 -20%, $pink600 100%",
+                    textGradient: "45deg, $red900 -20%, $red600 100%",
                   }}
                 >
                   {cat.name}
