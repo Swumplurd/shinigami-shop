@@ -1,4 +1,4 @@
-import { GridCategorias } from "../../components";
+import { GridCategorias } from "../../components/components";
 import { MainLayout } from "../../components/layouts";
 
 export default function Productos() {

@@ -1,2 +1,2 @@
 export * from "./NavbarUI";
-export * from "./theme";
+export * from "./SwitchTheme";

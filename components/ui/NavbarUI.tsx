@@ -1,6 +1,6 @@
 import { Button, Navbar, Text } from "@nextui-org/react";
 import { useRouter } from "next/router";
-import { SwitchTheme } from "./theme";
+import { SwitchTheme } from "./SwitchTheme";
 import Link from "next/link";
 
 const routes = [

@@ -1,6 +1,6 @@
 import { Card, Col, Grid, Row, Text } from "@nextui-org/react";
 import { useRouter } from "next/router";
-import { cat_productos } from "../data";
+import { cat_productos } from "../../data";
 
 export const GridCategorias = () => {
   const router = useRouter();
