@@ -2,7 +2,8 @@ import { FC, PropsWithChildren } from "react";
 import { Container, Spacer } from "@nextui-org/react";
 import { NavbarUI } from "../ui/NavbarUI";
 import Head from "next/head";
-import "animate.css/animate.min.css"
+import "animate.css/animate.min.css";
+import { Footer } from "../ui/Footer";
 
 interface Props {
   title?: string;
@@ -32,6 +33,8 @@ export const MainLayout: FC<PropsWithChildren & Props> = ({
         {children}
         <Spacer/>
       </Container>
+
+      <Footer />
     </>
   );
 };

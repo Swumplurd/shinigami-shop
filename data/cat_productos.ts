@@ -9,7 +9,7 @@ export const cat_productos: CategoriasProductos[] = [
         kw: "mangas, mangas anime libros, one piece, demon slayer, dr stone, jojos, ataque de los titanes, naruto, sword art online, chainsaw man, death note, jujutsu kaisen, my hero academia, tokyo revangers"
     },
     {
-        name: "Articulos por Temporada",
+        name: "Por Temporada",
         desc: "Encuentra esos articulos otaku que estabas buscando ideales para tu temporada del año favorita",
         img: "/img/cats/temporada.png",
         href: "temporada",
@@ -30,7 +30,7 @@ export const cat_productos: CategoriasProductos[] = [
         kw: "playeras, pantalones, sudaderas, playera, pantalon, sudadera, unisex, gorras, playeras con diseño, playeras de anime"
     },
     {
-        name: "Joyas y complementos",
+        name: "Joyas y Mas",
         desc: "Encuentra la mejor joyeria y complementos que usan tus personajes favoritos",
         img: "/img/cats/joyas-complementos.png",
         href: "joyas-complementos",

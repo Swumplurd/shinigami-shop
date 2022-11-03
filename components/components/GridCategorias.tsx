@@ -17,18 +17,6 @@ export const GridCategorias = () => {
             isPressable
             onPress={() => handleCatPress(cat.href)}
           >
-            <Card.Header>
-              <Col>
-                <Text
-                  h3
-                  css={{
-                    textGradient: "45deg, $red900 -20%, $red600 100%",
-                  }}
-                >
-                  {cat.name}
-                </Text>
-              </Col>
-            </Card.Header>
             <Card.Body css={{ p: 0 }}>
               <Card.Image
                 src={cat.img}
@@ -40,6 +28,26 @@ export const GridCategorias = () => {
                 maxDelay={10000}
               />
             </Card.Body>
+            <Card.Footer
+              isBlurred
+              css={{
+                position: "relative",
+                borderTop: "$borderWeights$light solid $gray800",
+                bottom: 0,
+                zIndex: 1,
+              }}
+            >
+              <Col>
+                <Text
+                  h4
+                  css={{
+                    textGradient: "45deg, $red900 -20%, $red600 100%",
+                  }}
+                >
+                  {cat.name}
+                </Text>
+              </Col>
+            </Card.Footer>
           </Card>
         </Grid>
       ))}
