@@ -9,3 +9,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   max-height: 100vh;
 }
+
+.social-media li {
+  margin: 0 16px
+}
