@@ -1,9 +1,9 @@
-import { Button, Navbar, Spacer, Text } from "@nextui-org/react";
 import { useRouter } from "next/router";
-import { SwitchTheme } from "./SwitchTheme";
-import { ShinigamiSVG } from "../svg";
 import Link from "next/link";
+import { Button, Navbar, Text } from "@nextui-org/react";
+import { SwitchTheme } from "./SwitchTheme";
 import { SwitchCart } from "./SwitchCart";
+import { ShinigamiSVG } from "../svg";
 
 const routes = [
   {

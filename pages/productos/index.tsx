@@ -1,4 +1,4 @@
-import { GridCategorias } from "../../components/components";
+import { CategoriasGrid } from "../../components/components";
 import { MainLayout } from "../../components/layouts";
 
 export default function Productos() {
@@ -12,7 +12,7 @@ export default function Productos() {
         Welcome to <a href="https://nextjs.org">Productos!</a>
       </h1>
 
-      <GridCategorias/>
+      <CategoriasGrid/>
     </MainLayout>
   );
 }

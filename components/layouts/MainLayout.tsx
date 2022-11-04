@@ -1,9 +1,8 @@
 import { FC, PropsWithChildren } from "react";
-import { Container, Spacer } from "@nextui-org/react";
-import { NavbarUI } from "../ui/NavbarUI";
 import Head from "next/head";
+import { Container, Spacer } from "@nextui-org/react";
+import { Footer, Cart, NavbarUI } from "../ui";
 import "animate.css/animate.min.css";
-import { Footer, Cart } from "../ui";
 
 interface Props {
   title?: string;

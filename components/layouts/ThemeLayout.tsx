@@ -1,7 +1,7 @@
-import { AppDispatch, RootState, startThemeSwitch } from "../../store";
-import { createTheme, NextUIProvider } from "@nextui-org/react";
 import { FC, PropsWithChildren, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { createTheme, NextUIProvider } from "@nextui-org/react";
+import { AppDispatch, RootState, startThemeSwitch } from "../../store";
 
 const darkTheme = createTheme({
   type: "dark",

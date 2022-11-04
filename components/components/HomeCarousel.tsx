@@ -1,7 +1,8 @@
-import SwiperCore, { Autoplay } from "swiper";
+import { Button, Card, Col, Image, Row, Text } from "@nextui-org/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
-import { Button, Card, Col, Image, Row, Text } from "@nextui-org/react";
+import SwiperCore, { Autoplay } from "swiper";
+
 import "swiper/css/pagination";
 import "swiper/css";
 

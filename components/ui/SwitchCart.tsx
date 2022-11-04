@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Button } from "@nextui-org/react";
-import { AppDispatch } from "../../store";
-import { startCartSwitch } from "../../store/slices/cart/thunks";
+import { AppDispatch, startCartSwitch } from "../../store";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 export const SwitchCart = () => {
@@ -12,7 +11,7 @@ export const SwitchCart = () => {
         auto
         light
         icon={<ShoppingCartOutlinedIcon/>}
-        onPress={() => dispatch(startCartSwitch())}
+        onClick={() => dispatch(startCartSwitch())}
         color="error"
       />
     </>

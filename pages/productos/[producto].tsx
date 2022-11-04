@@ -1,5 +1,5 @@
-import { GetStaticPaths, GetStaticProps } from "next";
 import { FC } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { MainLayout } from "../../components/layouts";
 import { cat_productos } from "../../data";
 import { CategoriasProductos } from "../../interfaces";

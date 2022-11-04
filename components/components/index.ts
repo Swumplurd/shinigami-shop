@@ -1,2 +1,2 @@
 export * from "./HomeCarousel"
-export * from "./GridCategorias"
+export * from "./CategoriasGrid"

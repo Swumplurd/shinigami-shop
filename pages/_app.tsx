@@ -1,8 +1,8 @@
-import { ThemeLayout } from "../components/layouts";
-import { Provider } from "react-redux";
-import { AppProps } from "next/app";
-import { store } from "../store";
 import { NextPage } from "next";
+import { AppProps } from "next/app";
+import { Provider } from "react-redux";
+import { ThemeLayout } from "../components/layouts";
+import { store } from "../store";
 import "../styles/globals.css";
 
 type NextPageWithLayout = NextPage & {
