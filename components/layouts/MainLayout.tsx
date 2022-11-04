@@ -3,7 +3,7 @@ import { Container, Spacer } from "@nextui-org/react";
 import { NavbarUI } from "../ui/NavbarUI";
 import Head from "next/head";
 import "animate.css/animate.min.css";
-import { Footer } from "../ui/Footer";
+import { Footer, Cart } from "../ui";
 
 interface Props {
   title?: string;
@@ -27,6 +27,7 @@ export const MainLayout: FC<PropsWithChildren & Props> = ({
       </Head>
 
       <NavbarUI />
+      <Cart/>
 
       <Container as="main" lg className="animate__animated animate__fadeIn">
         <Spacer/>

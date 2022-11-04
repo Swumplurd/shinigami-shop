@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { SwitchTheme } from "./SwitchTheme";
 import { ShinigamiSVG } from "../svg";
 import Link from "next/link";
+import { SwitchCart } from "./SwitchCart";
 
 const routes = [
   {
@@ -60,6 +61,9 @@ export const NavbarUI = () => {
         ))}
       </Navbar.Content>
       <Navbar.Content>
+        <Navbar.Item>
+          <SwitchCart />
+        </Navbar.Item>
         <Navbar.Link color="inherit" href="#">
           Iniciar Sesion
         </Navbar.Link>

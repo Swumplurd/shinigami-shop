@@ -47,10 +47,10 @@ export const Footer = () => {
           </Text>
         </Grid>
         <Grid xl={4} lg={4} md={5} sm={8} xs={10} justify="center">
-          <Input width="100%" placeholder="Ingresa tu email" status="error" />
+          <Input width="100%" placeholder="Ingresa tu email" status="error" aria-label="Suscribirse"/>
         </Grid>
         <Grid xs={12} justify="center">
-          <Button color="error">Suscibirse</Button>
+          <Button color="error">Suscribirse</Button>
         </Grid>
       </Grid.Container>
     </Container>
