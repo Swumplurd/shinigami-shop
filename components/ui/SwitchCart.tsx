@@ -5,13 +5,17 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 export const SwitchCart = () => {
   const dispatch: AppDispatch = useDispatch();
+  const handleOpenCart = () => {
+    dispatch(startCartSwitch())
+  }
+
   return (
     <>
       <Button
         auto
         light
         icon={<ShoppingCartOutlinedIcon/>}
-        onClick={() => dispatch(startCartSwitch())}
+        onPress={handleOpenCart}
         color="error"
       />
     </>

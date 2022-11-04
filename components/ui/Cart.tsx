@@ -1,19 +1,31 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Text, useTheme } from "@nextui-org/react";
+import { Button, Text, useTheme } from "@nextui-org/react";
 import { Box, Drawer } from "@mui/material";
-import { AppDispatch, RootState } from "../../store";
-import { startCartSwitch } from "../../store/slices/cart/thunks";
+import { AppDispatch, RootState, startCartSwitch } from "../../store";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
 export const Cart = () => {
-  const dispatch: AppDispatch = useDispatch()
+  const dispatch: AppDispatch = useDispatch();
   const { theme } = useTheme();
   const { isOpen } = useSelector((state: RootState) => state.cart);
 
   return (
-    <Drawer anchor="right" open={isOpen} onClose={() => dispatch(startCartSwitch())}>
-      <Box sx={{ width: 330 }} style={{backgroundColor: theme?.colors.gray50.value, flexGrow: 1}}>
+    <Drawer anchor="right" open={isOpen}>
+      <Box
+        sx={{ width: 330 }}
+        style={{ backgroundColor: theme?.colors.gray50.value, flexGrow: 1 }}
+      >
         <Box sx={{ padding: "5px 10px" }}>
-          <Text h4>Carrito</Text>
+          <Button
+            auto
+            light
+            icon={<CloseOutlinedIcon />}
+            onPress={() => dispatch(startCartSwitch())}
+            color="error"
+          />
+        </Box>
+        <Box style={{ display: "flex", justifyContent: "center" }}>
+          <Text h3>Carrito de Compras</Text>
         </Box>
       </Box>
     </Drawer>
